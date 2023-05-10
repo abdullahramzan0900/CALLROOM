@@ -1,0 +1,150 @@
+.layout {
+    background: #e5ebef;
+}
+.layout .css-mpr9kc-MuiPaper-root-MuiDrawer-paper {
+    height: 95%;
+    left: 16px;
+    top: 10px;
+    border-radius: 20px;
+}
+.layout .css-1puh3cy-MuiPaper-root-MuiAppBar-root {
+    background-color: #e5ebef;
+}
+.datagrid {
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 75px;
+}
+.datagrid .table-header h4 {
+    padding-left: 14px;
+    color: #fff;
+}
+header .MuiToolbar-regular {
+    box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(255, 255, 255, 0.9), 0rem 1.25rem 1.6875rem 0rem rgba(0, 0, 0, 0.05);
+    -webkit-backdrop-filter: saturate(200%) blur(1.875rem);
+    backdrop-filter: saturate(200%) blur(1.875rem);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #344767;
+    top: 0.75rem;
+    min-height: 4rem;
+    border-radius: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 92%;
+    margin: 0 auto;
+}
+.datagrid .custom-data-grid {
+    padding-top: 55px;
+    border-radius: 12px;
+}
+.simplebar-wrapper {
+    margin: 0px;
+    background: #0576bc;
+}
+.simplebar-wrapper .simplebar-content-wrapper tr {
+    background-color: #fff;
+}
+.simplebar-wrapper .simplebar-content-wrapper ul a {
+    color: #fff !important;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.simplebar-wrapper .simplebar-content-wrapper ul a.active {
+    border-radius: 4px;
+    background: linear-gradient(195deg, #49a3f1, #1a73e8);
+    color: #ffffff;
+    font-weight: 700;
+}
+.simplebar-wrapper .simplebar-content-wrapper ul a:hover {
+    border-radius: 4px;
+    background: linear-gradient(195deg, #49a3f1, #1a73e8);
+    color: #ffffff;
+    font-weight: 700;
+}
+.simplebar-wrapper .simplebar-content-wrapper hr {
+    flex-shrink: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.08);
+    height: 0.0625rem;
+    margin: 1rem 0;
+    border-bottom: none;
+    opacity: 0.25;
+    background-color: transparent;
+    background-image: linear-gradient( to right, rgba(255, 255, 255, 0), #ffffff, rgba(255, 255, 255, 0) ) !important;
+}
+.simplebar-content-wrapper table tbody tr:hover {
+    cursor: pointer;
+}
+.simplebar-content-wrapper table tbody tr:hover th{
+    color: #fff;
+}
+.simplebar-content-wrapper table tbody tr:hover td{
+    color: #fff;
+}
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0576bc;
+    width: 98%;
+    margin: 0 auto;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    z-index: 999;
+    border-radius: 12px;
+    padding: 5px 0px;
+}
+.table-header button {
+    margin-right: 24px;
+    color: #fff;
+}
+.table-header button:hover {
+    background-color: #1a86c9;
+    color: #fff;
+}
+.table-header .MuiOutlinedInput-root {
+    background-color: #fff;
+}
+.table-header .MuiOutlinedInput-root svg {
+    color: #0576bc;
+}
+.MuiButton-textPrimary {
+    background: #0576bc;
+    color: #fff !important;
+}
+.MuiButton-textPrimary:hover {
+    background-color: #1a86c9;
+}
+.MuiButton-textSecondary {
+    background: #4a0f0f;
+    color: #fff;
+}
+.MuiButton-textSecondary:hover {
+    background: #761c1c;
+}
+.css-ypiqx9-MuiDialogContent-root {
+    position: relative;
+    padding-top: 5rem;
+}
+.form-header {
+    position: absolute;
+    margin: 0;
+    top: -12px;
+    z-index: 999;
+    width: 89%;
+    background: #0576bc;
+    padding: 20px;
+    color: #fff;
+    border-radius: 12px;
+}
+/* PaperBox Start */
+
+.css-1byr0tz {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+}

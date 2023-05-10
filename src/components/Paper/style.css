@@ -1,0 +1,29 @@
+.paper-content {
+    padding: 20px;
+}
+.paper-content .title {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.paper-content .items {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+.main-paper-box{
+    display: flex;
+    flex-direction: column;
+}
+.RoleList-main{
+width: 100% !important;
+}
+.RoleList-main div{
+    display: flex;
+
+
+    width: 60% !important;
+   
+    }
+    

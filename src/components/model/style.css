@@ -1,0 +1,10 @@
+.MuiDialog-paperWidthSm {
+    width: 475px;
+    padding: 30px;
+    padding-top: 0;
+    border-radius: 12px;
+}
+.form-header{
+    display: flex;
+    justify-content: center;
+}
