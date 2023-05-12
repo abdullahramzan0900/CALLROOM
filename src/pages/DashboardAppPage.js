@@ -1,7 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { useTheme } from '@mui/material/styles';
+// eslint-disable-next-line import/no-unresolved
+import { cilUser } from '@coreui/icons';
 import { Grid, Container } from '@mui/material';
 import { MdMeetingRoom } from 'react-icons/md';
+import {IoMdCall} from 'react-icons/io';
+import {FiUsers} from 'react-icons/fi';
 import { AppCurrentVisits, AppWebsiteVisits, AppWidgetSummary } from '../sections/@dashboard';
 
 export default function DashboardAppPage() {
@@ -15,15 +19,16 @@ export default function DashboardAppPage() {
       <Container maxWidth="xl">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
-            <AppWidgetSummary title="Calls" total={714000} icon={<MdMeetingRoom/>} />
+  
+            <AppWidgetSummary color='info' title="Calls" total={8} icon={<IoMdCall size={30}/>} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <AppWidgetSummary title="Rooms" total={1352831} color="info" icon='' />
+            <AppWidgetSummary title="Rooms" total={10} color="info" icon={<MdMeetingRoom size={30}/>} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <AppWidgetSummary title="Employees" total={1723315} color="warning" icon='' />
+            <AppWidgetSummary title="Employees" total={200} color="info" icon={<FiUsers size={30}/>} />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
@@ -71,11 +76,11 @@ export default function DashboardAppPage() {
               title="Calls"
               subheader="Weekly Calls"
               chartData={[
-                { label: 'Monday', value: 4344 },
-                { label: 'Tuesday', value: 5435 },
-                { label: 'Wednesday', value: 1443 },
-                { label: 'Thursday', value: 4443 },
-                { label: 'Friday', value: 4443 },
+                { label: 'Monday', value: 15 },
+                { label: 'Tuesday', value: 12 },
+                { label: 'Wednesday', value: 8 },
+                { label: 'Thursday', value: 7 },
+                { label: 'Friday', value: 18 },
               ]}
               chartColors={[
                 theme.palette.primary.main,

@@ -5,21 +5,45 @@ import './style.css';
 import RoleList from './RoleList';
 
 function PaperBox({ Role }) {
-  useEffect(()=>{
-
-    setPermissions(Role);
-  },[Role])
   const [permissions, setPermissions] = useState(Role);
-  console.log(Role,"role2")
-  console.log(permissions);
+  const [showButtons, setShowButtons] = useState(false);
+
+  useEffect(() => {
+    setPermissions(Role);
+  }, [Role]);
+
+  const handleCheckboxChange = (event, item, func) => {
+    const { checked } = event.target;
+    const updatedPermissions = permissions.permissions.map((p) => {
+      if (p.name === item.name) {
+        return {
+          name: p.name,
+          functionalities: {
+            ...p.functionalities,
+            [func]: checked,
+          },
+        };
+      }
+      return p;
+    });
+    setPermissions({ ...permissions, permissions: updatedPermissions });
+    setShowButtons(true);
+  };
+
+  const handleCancel = () => {
+    setPermissions(Role);
+    setShowButtons(false);
+  };
+
+  const handleSave = () => {
+    // Save the updated permissions here
+    console.log(permissions.permissions, 'saving..');
+    setShowButtons(false);
+  };
+
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-        }}
-      >
+      <div className="paper-item">
         {permissions.permissions?.map((item) => (
           <div className="paper-box" key={item.name}>
             <Box
@@ -27,8 +51,8 @@ function PaperBox({ Role }) {
                 display: 'flex',
                 '& > :not(style)': {
                   m: 1,
-                  width: 300,
-                  height: 210,
+                  width: 340,
+                  height: 230,
                 },
               }}
             >
@@ -45,22 +69,7 @@ function PaperBox({ Role }) {
                         name={`${item.name}-${func}`}
                         id={`${item.name}-${func}`}
                         checked={item.functionalities[func]}
-                        onChange={(event) => {
-                          const { checked } = event.target;
-                          const updatedPermissions = permissions.permissions.map((p) => {
-                            if (p.name === item.name) {
-                              return {
-                                name: p.name,
-                                functionalities: {
-                                  ...p.functionalities,
-                                  [func]: checked,
-                                },
-                              };
-                            }
-                            return p;
-                          });
-                          setPermissions({ ...permissions, permissions: updatedPermissions });
-                        }}
+                        onChange={(event) => handleCheckboxChange(event, item, func)}
                       />
                     </div>
                   ))}
@@ -70,23 +79,16 @@ function PaperBox({ Role }) {
           </div>
         ))}
       </div>
-      <button
-        onClick={() => {
-          console.log('Saving permissions:', permissions.permissions);
-          // Save the updated permissions here
-        }}
-      >
-        Save
-      </button>
-      <button
-        onClick={() => {
-          setPermissions(Role);
-          console.log('Discarding changes');
-        }}
-      >
-        {' '}
-        Cancel
-      </button>
+      {showButtons && (
+        <div className="paper-role-btn">
+          <button className="cancel-btn" onClick={handleCancel}>
+            Cancel
+          </button>
+          <button className="save-btn" onClick={handleSave}>
+            Save
+          </button>
+        </div>
+      )}
     </>
   );
 }

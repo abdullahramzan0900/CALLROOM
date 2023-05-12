@@ -18,8 +18,8 @@ export default function RoleList() {
             canView: true,
             canAdd: true,
             canEdit: true,
-            canDelete: false
-          }
+            canDelete: false,
+          },
         },
         {
           name: 'Roles',
@@ -27,28 +27,28 @@ export default function RoleList() {
             canView: true,
             canAdd: false,
             canEdit: false,
-            canDelete: false
-          }
+            canDelete: false,
+          },
         },
         {
-            name: 'Calls',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: false,
-              canDelete: false
-            }
+          name: 'Calls',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: false,
+            canDelete: false,
           },
-          {
-            name:'Employees',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: false,
-              canDelete: false
-            }
+        },
+        {
+          name: 'Employees',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: false,
+            canDelete: false,
           },
-      ]
+        },
+      ],
     },
     {
       role: 'Ar',
@@ -59,37 +59,37 @@ export default function RoleList() {
             canView: true,
             canAdd: true,
             canEdit: false,
-            canDelete: false
-          }
+            canDelete: false,
+          },
         },
         {
-            name: 'Calls',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: true,
-              canDelete: false
-            }
+          name: 'Calls',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: true,
+            canDelete: false,
           },
-          {
-            name:'Employees',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: true,
-              canDelete: false
-            }
+        },
+        {
+          name: 'Employees',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: true,
+            canDelete: false,
           },
-          {
-            name: 'Roles',
-            functionalities: {
-              canView: true,
-              canAdd: true,
-              canEdit: false,
-              canDelete: false
-            }
+        },
+        {
+          name: 'Roles',
+          functionalities: {
+            canView: true,
+            canAdd: true,
+            canEdit: false,
+            canDelete: false,
           },
-      ]
+        },
+      ],
     },
     {
       role: 'Voice',
@@ -100,37 +100,37 @@ export default function RoleList() {
             canView: true,
             canAdd: true,
             canEdit: true,
-            canDelete: false
-          }
+            canDelete: false,
+          },
         },
-          {
-            name:'Employees',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: false,
-              canDelete: false
-            }
+        {
+          name: 'Employees',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: false,
+            canDelete: false,
           },
-          {
-            name: 'Roles',
-            functionalities: {
-              canView: true,
-              canAdd: true,
-              canEdit: false,
-              canDelete: false
-            }
+        },
+        {
+          name: 'Roles',
+          functionalities: {
+            canView: true,
+            canAdd: true,
+            canEdit: false,
+            canDelete: false,
           },
-          {
-            name: 'Projects',
-            functionalities: {
-              canView: true,
-              canAdd: true,
-              canEdit: false,
-              canDelete: false
-            }
+        },
+        {
+          name: 'Projects',
+          functionalities: {
+            canView: true,
+            canAdd: true,
+            canEdit: false,
+            canDelete: false,
           },
-      ]
+        },
+      ],
     },
     {
       role: 'Arm',
@@ -141,8 +141,8 @@ export default function RoleList() {
             canView: true,
             canAdd: true,
             canEdit: true,
-            canDelete: true
-          }
+            canDelete: true,
+          },
         },
         {
           name: 'Roles',
@@ -150,65 +150,66 @@ export default function RoleList() {
             canView: true,
             canAdd: false,
             canEdit: false,
-            canDelete: false
-          }
-          
+            canDelete: false,
+          },
         },
         {
-            name: 'Calls',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: false,
-              canDelete: false
-            }
+          name: 'Calls',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: false,
+            canDelete: false,
           },
-          {
-            name:'Employees',
-            functionalities: {
-              canView: true,
-              canAdd: false,
-              canEdit: false,
-              canDelete: false
-            }
+        },
+        {
+          name: 'Employees',
+          functionalities: {
+            canView: true,
+            canAdd: false,
+            canEdit: false,
+            canDelete: false,
           },
-
-      ]
-    }
-  
+        },
+      ],
+    },
   ];
 
-
   const [selectedRole, setSelectedRole] = useState(data[0]);
-  console.log(selectedRole,"roleee")
+  console.log(selectedRole, 'roleee');
 
+  console.log(selectedRole?.role, 'aaarrrr');
+  console.log(selectedRole, 'aaaaa');
   const handleChange = (event) => {
-    setSelectedRole( event.target.value);
+    // console.log("my event", role)
+    console.log(event.target.value,"value")
+    setSelectedRole(event.target.value);
   };
-console.log(selectedRole,"aaa")
-console.log(selectedRole,"aaaaa")
-  return (  
-    <div>
+  return (
+    <div className="paper-role">
       <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">Role</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            value={selectedRole.role}
-            label="Role"  
+            value={selectedRole}
+            label="Role"
             onChange={handleChange}
-          >
-            {data.map((item) => (
-              <MenuItem key={item.role} value={item}>{item.role}</MenuItem>
-            ))}
+          > 
+            {data &&
+              data?.length > 0 &&
+              data.map((item) => (
+                <MenuItem    key={item.role} value={item}>
+                  {item.role}
+                </MenuItem>
+              ))}
           </Select>
         </FormControl>
       </Box>
       <div>
-          <PaperBox Role={selectedRole} setSelectedRole={setSelectedRole} />
-      
+        <PaperBox Role={selectedRole} setSelectedRole={setSelectedRole} />
       </div>
     </div>
-  );   
+  );
 }

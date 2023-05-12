@@ -148,3 +148,44 @@ header .MuiToolbar-regular {
     flex-wrap: wrap;
     height: max-content;
 }
+.paper-role {
+    width: 92%;
+    margin: 0 auto;
+}
+.paper-role .paper-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.paper-role .paper-item .paper-box .MuiPaper-elevation {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+.paper-role .paper-role-btn {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+.paper-role .paper-role-btn button {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+}
+.paper-role .paper-role-btn .save-btn {
+    background-color: #0576bc;
+}
+.paper-role .paper-role-btn .save-btn:hover {
+    background-color: #1a86c9;
+}
+.paper-role .paper-role-btn .cancel-btn {
+    background-color: #4a0f0f;
+}
+.paper-role .paper-role-btn .cancel-btn:hover {
+    background-color: #761c1c;
+}

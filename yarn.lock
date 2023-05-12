@@ -1071,6 +1071,16 @@
   "resolved" "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   "version" "0.2.3"
 
+"@coreui/icons-react@^2.1.0":
+  "integrity" "sha512-x7qhVB6IJFbGBh/An3QZHtuUISM+TBgc4x3ecrBel+wMdJm4Qpmg9Km0GFfOkP6/fNOfy2fLb2wZ2bbe5+sgQA=="
+  "resolved" "https://registry.npmjs.org/@coreui/icons-react/-/icons-react-2.1.0.tgz"
+  "version" "2.1.0"
+
+"@coreui/icons@^3.0.1":
+  "integrity" "sha512-u9UKEcRMyY9pa4jUoLij8pAR03g5g6TLWV33/Mx2ix8sffyi0eO4fLV8DSTQljDCw938zt7KYog5cVKEAJUxxg=="
+  "resolved" "https://registry.npmjs.org/@coreui/icons/-/icons-3.0.1.tgz"
+  "version" "3.0.1"
+
 "@csstools/normalize.css@*":
   "integrity" "sha512-M0qqxAcwCsIVfpFQSlGN5XjXWu8l5JDZN+fPt1LeW5SZexQTgnaEvgXAY+CeygRw0EeppWHi12JxESWiWrB0Sg=="
   "resolved" "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-12.0.0.tgz"
